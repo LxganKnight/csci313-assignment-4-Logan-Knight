@@ -3,7 +3,8 @@ from django.db import models
 # Create your models here.
 
 from django.urls import reverse  # To generate URLS by reversing URL patterns
-
+from django.db.models import UniqueConstraint # Constrains fields to unique values
+from django.db.models.functions import Lower # Returns lower cased value of field
 
 class Genre(models.Model):
     """Model representing a book genre (e.g. Science Fiction, Non Fiction)."""
